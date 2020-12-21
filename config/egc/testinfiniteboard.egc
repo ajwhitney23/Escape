@@ -1,0 +1,23 @@
+Coordinate type : TRIANGLE
+xMax : 0
+yMax : 0
+
+Locations :
+	(4, 4) clear player1 snail
+	(-1, -1) player2 horse
+	(5, 5) player1 bird
+	(5, 6) player2 frog
+	(1, 1) player2 dog
+	(10, 10) exit
+	
+Piece descriptors :
+	SNAIL omni [distance 1]
+	DOG linear [distance 5]
+	HORSE linear [distance 7, jump]
+	bird linear [fly 5]
+	frog omni [distance 3, unblock]
+	
+Rules :
+	REMOVE
+	SCORE 10
+	TURN_LIMIT 20

@@ -1,0 +1,78 @@
+==== ALPHA ====
+
+1. make an EscapeGameManagerImpl from EscapeGameBuilder [DONE]
+2. manager make a coordinate [DONE]
+3. manager make incorrect coordinate [DONE]
+4. test square distance in vertical direction -> (1,1) (1,2) -> 1 [DONE]
+5. test square distance in horizontal direction -> (1,1) (2,1) -> 1 [DONE]
+6. test square distance in diagonal direction -> (1,1) (3,3) -> 2 [DONE]
+7. test square distance in mixed direction (diag/vert or horiz) -> (3,5) (8,1) -> 5 [DONE]
+8. testing getPieceAt() with a valid location -> EscapePiece [DONE]
+9. testing getPieceAt() returns correct player -> Player [DONE]
+10. testing getPieceAt() with an invalid location -> null [DONE]
+11. testing getPieceAt() with coordinate not on board -> null [DONE]
+12. testing move() invalid from -> false [DONE]
+13. testing move() invalid to -> false [DONE]
+14. testing move() incorrect player's piece -> false [DONE]
+15. testing move() move to block -> false [DONE]
+16. testing move() move to clear -> true [DONE]
+17. testing move() move to exit -> true, piece gone [DONE]
+18. testing move() move to other player's piece -> false 
+19. testing move() true switches players -> true after second true move call [DONE]
+20. testing move() false to own piece -> false [DONE]
+21. testing move() true to same cord as from -> true [DONE]
+22. testing move() false if to cord is null -> false [DONE]
+23. testing move() false if from cord is null -> false [DONE]
+24. testing getPieceAt() with null cord returns null -> null [DONE]
+
+
+==== BETA ====
+
+21(changed from alpha). testing move() false if to and from is the same location -> false [DONE]
+TESTING TRIANGLE DistanceTo:
+25. same column opposite direction (down to up, c1.x - c2.x = -) -> (1,1) (2,1) -> 1 [DONE]
+26. same column same direction -> (1,1) (3,1) -> 4 [DONE]
+27. same column opposite direction (down to up, c1.x - c2.x = +) -> (3,1) (2,1) -> 3 [DONE]
+28. same column opposite direction moving up -> (1,3) (4,3) -> 5 [DONE]
+29. same column opposite direction moving up (up TRIANGLE first) -> (1,4) (4,4) -> 7 [DONE]
+30. same column opposite direction moving down (up TRIANGLE first) -> (3,4) (1,4) -> 4 [DONE] 
+31. change in rows less than change in columns -> (1,1) (2,7) -> 7 [DONE]
+32. change in rows less than change in columns 2 -> (2,1) (4,7) -> 8 [DONE]
+33. same direction change in rows > change in columns -> (1,1) (4,2) -> 6 [DONE]
+34. same direction change in rows = change in columns -> (2,2) (4,4) -> 4 [DONE]
+35. opposite direction change in rows > change in columns -> (1,1) (3,2) -> 3 [DONE] 
+36. test infinite board -> getPiece at (-1,-1) -> returns piece 
+37. test pieces now have movement patterns -> getPieceAt(4,4) movement pattern == diagonal -> true 
+38. test piece has distance attribute [DONE]
+39. test piece doesnt have jump attribute [DONE]
+40. test piece doesn't have unblock attribute [DONE]
+41. test piece has value attribute [DONE]
+42. test piece has unblock attribute [DONE]
+43. test piece has jump attribute [DONE]
+44. test false move() too long distance [DONE]
+45. test true jump over piece [DONE]
+46. test true path found triangle [DONE]
+47. test true fly path [DONE]
+48. test false path short bc of other pieces obstructing [DONE]
+49. test true jump triangle [DONE]
+50. test true ortho movement [DONE]
+51. test false no possilbe movement [DONE]
+52. test piece movement linear (diag linear) NE
+53. test piece movement not linear linear piece -> false [DONE]
+54-60. test piece movement N, NW, W, SW, S, SE, E [DONE]
+
+==== GAMMA ====
+
+61. test block stops path square -> false [DONE]
+62. test fly over block and piece square -> true [DONE]
+63. test unblock square -> true [DONE]
+64. test rulehandler turn limit one -> [DONE]
+65. test rule handler score limit one [DONE]
+66. test rule handler score limit p2 wins [DONE]
+67. test game observer p1 wins [DONE]
+68. test game observer p1 has already won [DONE]
+69. test game observer add and remove [DONE]
+70. test no pieces left player1 wins [DONE]
+71. test no pieces left player2 wins [DONE]
+72-81. test Triangle Linear MovementPatterns
+82. test game observer draw
